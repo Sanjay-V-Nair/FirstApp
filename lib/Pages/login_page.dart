@@ -75,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
                       Navigator.pushNamed(context, MyRoutes.homeRoute);
                     },
                     child: AnimatedContainer(
-                      duration: Duration(seconds: 1),
+                      duration: Duration(milliseconds: 300),
                       width: changeButton ? 50 : 150,
                       height: 50,
                       // color: Colors.deepPurple,  //We can't use color on bohh places. decoration is already using color
