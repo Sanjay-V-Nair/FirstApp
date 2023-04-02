@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:project/Pages/home.dart';
 import 'package:project/Pages/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project/utils/routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,11 +31,12 @@ class MyApp extends StatelessWidget {
         // primaryTextTheme: GoogleFonts.latoTextTheme(),
       ),
       darkTheme: ThemeData(brightness: Brightness.dark),
+      // debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
         '/': (context) => LoginPage(),
-        '/home': (context) => Homepage(),
-        '/login': (context) => LoginPage()
+        MyRoutes.homeRoute: (context) => Homepage(),
+        MyRoutes.loginRoute: (context) => LoginPage()
       },
     );
   }
@@ -43,5 +45,4 @@ class MyApp extends StatelessWidget {
   // abc({required bool alphabet, int number=6}){
   //   //Exaample of a Method in Flutter
   // }
-
 }

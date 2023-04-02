@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
   // const LoginPage({Key? key}) : super(key: key);
@@ -18,54 +19,56 @@ class LoginPage extends StatelessWidget {
 //           // textScaleFactor: 2.0,
 //         ),
 //       ),
-      child: Column(
-        children: [
-          Image.asset("assets/Images/login_img.png", fit: BoxFit.cover),
-          SizedBox(
-            height: 20.0,
-          ),
-          Text(
-            "Welcome",
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset("assets/Images/login_img.png", fit: BoxFit.cover),
+            SizedBox(
+              height: 20.0,
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
-            child: Column(
-              children: [
-                TextFormField(
-                  decoration: InputDecoration(
-                    hintText: "Enter Username",
-                    labelText: 'Username',
+            Text(
+              "Welcome",
+              style: TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+              child: Column(
+                children: [
+                  TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Enter Username",
+                      labelText: 'Username',
+                    ),
                   ),
-                ),
-                TextFormField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: "Enter Password",
-                    labelText: 'Password',
+                  TextFormField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: "Enter Password",
+                      labelText: 'Password',
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                ElevatedButton(
-                  child: Text("Login"),
-                  style: TextButton.styleFrom(),
-                  //ButtonStyle(
-                  //   // foregroundColor:MaterialStateProperty,\
+                  SizedBox(
+                    height: 40.0,
+                  ),
+                  ElevatedButton(
+                    child: Text("Login"),
+                    style: TextButton.styleFrom(minimumSize: Size(150, 40)),
+                    //ButtonStyle(
+                    //   // foregroundColor:MaterialStateProperty,\
 
-                  // ),
-                  onPressed: () {
-                    print("Hi Sanjay");
-                  },
-                ),
-              ],
-            ),
-          )
-        ],
+                    // ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, MyRoutes.homeRoute);
+                    },
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
