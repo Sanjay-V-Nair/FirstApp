@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project/widgets/item_widget.dart';
 import '../widgets/drawer.dart';
 import 'package:project/models/catalog.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class Homepage extends StatelessWidget {
   // const Homepage({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class Homepage extends StatelessWidget {
   String name = "Name";
   @override
   Widget build(BuildContext context) {
-    // final dummyList = List.generate(10, (index) => CatalogModel.items[0]);
+    final dummyList = List.generate(10, (index) => CatalogModel.items[0]);
     return Scaffold(
       appBar: AppBar(
         // backgroundColor: Colors.white,
@@ -23,12 +24,12 @@ class Homepage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView.builder(
-            // itemCount: dummyList.length,
-            itemCount: CatalogModel.items.length,
+            itemCount: dummyList.length,
+            //itemCount: CatalogModel.items.length,
             itemBuilder: (context, index) {
               return ItemWidget(
-                // item: dummyList[index],
-                item: CatalogModel.items[index],
+                item: dummyList[index],
+                //item: CatalogModel.items[index],
               );
             }),
       ),

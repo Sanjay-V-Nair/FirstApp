@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +14,9 @@ class MyDrawer extends StatelessWidget {
     return Drawer(
       child: Container(
         color: Colors.deepPurple,
+        // child: ClipRRect(
+        // child: BackdropFilter(
+        //   filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
         child: ListView(
           children: [
             DrawerHeader(
@@ -66,6 +71,8 @@ class MyDrawer extends StatelessWidget {
             ),
           ],
         ),
+        //),
+        // )
       ),
     );
   }
