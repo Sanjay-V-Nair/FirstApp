@@ -19,4 +19,6 @@ class MyTheme {
         brightness: Brightness.dark,
         // primaryTextTheme: GoogleFonts.latoTextTheme(),
       );
+
+  static Color creamColor = Color.fromARGB(255, 233, 230, 230);
 }
